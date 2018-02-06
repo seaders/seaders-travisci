@@ -15,7 +15,6 @@ class BaseThreadingTest(unittest.TestCase):
             while self.t_cont:
                 i += 1
                 self._caches['1.{}'.format(i)] = 1
-                time.sleep(0.001)
 
         t = threading.Thread(target=_change_dict)
         t.start()
@@ -26,7 +25,7 @@ class BaseThreadingTest(unittest.TestCase):
 
         finally:
             self.t_cont = False
-            
+
         self.t_cont = False
 
 #
