@@ -5,9 +5,6 @@ import time
 
 
 class BaseThreadingTest(unittest.TestCase):
-    def setUp(self):
-        pass
-    
     def test_snap(self):
         self._caches = {'1.{}'.format(i): None for i in range(10000)}
         self.t_cont = True
