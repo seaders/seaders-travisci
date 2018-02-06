@@ -6,7 +6,7 @@ import time
 
 class BaseThreadingTest(unittest.TestCase):
     def test_snap_dict_size(self):
-        caches = {'1.{}'.format(i): None for i in range(100)}
+        caches = {'1.{}'.format(i): None for i in range(10000)}
         self._caches = dict(caches.items())
         self.t_cont = True
         self.t_delay = True
