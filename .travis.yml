@@ -3,9 +3,11 @@ language: python
 sudo: false
 
 python:
+  - "2.7"
   - "3.6"
 
 install:
+  - if [[ $TRAVIS_PYTHON_VERSION == '2.7' ]]; then travis_retry pip install mock; fi
   - pip install coveralls
 
 script:
